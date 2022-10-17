@@ -69,13 +69,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Forgot Password Page'),
-          leading: IconButton(onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
-                ));
-          }, icon: const Icon(Icons.arrow_back)),
+          leading: BackButton(onPressed: (){
+            Navigator.pop(context);
+          }),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
