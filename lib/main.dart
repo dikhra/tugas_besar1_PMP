@@ -27,19 +27,11 @@ class HomePage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Home Page'),
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.black54,
-            ),
-          ),
           actions: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search, color: Colors.black54))
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
           ],
         ),
+        drawer: const Drawer(),
         body: Center(
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -69,7 +61,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Forgot Password Page'),
-          leading: BackButton(onPressed: (){
+          leading: BackButton(onPressed: () {
             Navigator.pop(context);
           }),
         ),
@@ -109,11 +101,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       ));
                 },
                 style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18)),
-                    textStyle:
-                        const TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                    textStyle: const TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.bold)),
                 child: const Text('Submit'))
           ],
         ),
